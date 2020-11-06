@@ -1119,9 +1119,9 @@ void loop()
 				renderer.clearScreenBuffer(matrix);
 				for (uint8_t z = 0; z <= 6; z++)
 				{
-					matrix[2 + z] |= (lettersBig[feedText[feedPosition] - 32][z] << 11 + y) & 0b1111111111100000;
-					matrix[2 + z] |= (lettersBig[feedText[feedPosition + 1] - 32][z] << 5 + y) & 0b1111111111100000;
-					matrix[2 + z] |= (lettersBig[feedText[feedPosition + 2] - 32][z] << y - 1) & 0b1111111111100000;
+					matrix[2 + z] |= (lettersBig[feedText[feedPosition] - 32][z] << (11 + y)) & 0b1111111111100000;
+					matrix[2 + z] |= (lettersBig[feedText[feedPosition + 1] - 32][z] << (5 + y)) & 0b1111111111100000;
+					matrix[2 + z] |= (lettersBig[feedText[feedPosition + 2] - 32][z] << (y - 1)) & 0b1111111111100000;
 				}
 				writeScreenBuffer(matrix, feedColor, brightness);
 				delay(FEED_SPEED);
@@ -2403,7 +2403,6 @@ void handleSetEvent()
 // Page showText
 void handleShowText()
 {
-	uint8_t feedBuzzer = webServer.arg("buzzer").toInt();
 	feedColor = webServer.arg("color").toInt();
 	feedText = "  " + webServer.arg("text").substring(0, 80) + "   ";
 	feedPosition = 0;
@@ -2414,6 +2413,7 @@ void handleShowText()
 #endif
 
 #ifdef BUZZER
+	uint8_t feedBuzzer = webServer.arg("buzzer").toInt();
 	for (uint8_t i = 0; i < feedBuzzer; i++)
 	{
 		digitalWrite(PIN_BUZZER, HIGH);

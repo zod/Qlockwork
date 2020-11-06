@@ -41,4 +41,6 @@ uint8_t OpenWeather::getOutdoorConditions(String location, String apiKey, String
         pressure = (int)weatherArray["main"]["pressure"];
         return 1;
     }
+
+    return 0;
 }
