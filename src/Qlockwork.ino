@@ -37,6 +37,7 @@
 #include <IRutils.h>
 #include <TimeLib.h>
 #include <Timezone.h>
+#include <WiFiManager.h>
 
 #include "Colors.h"
 #include "Configuration.h"
@@ -50,7 +51,6 @@
 #include "Settings.h"
 #include "Syslog.h"
 #include "Timezones.h"
-#include "WiFiManager.h"
 
 //******************************************************************************
 // Init
