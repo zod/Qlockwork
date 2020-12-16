@@ -35,6 +35,7 @@
 #include <IRremoteESP8266.h>
 #include <IRrecv.h>
 #include <IRutils.h>
+#include <Syslog.h>
 #include <TimeLib.h>
 #include <Timezone.h>
 #include <WiFiManager.h>
@@ -49,7 +50,6 @@
 #include "OpenWeather.h"
 #include "Renderer.h"
 #include "Settings.h"
-#include "Syslog.h"
 #include "Timezones.h"
 
 //******************************************************************************
