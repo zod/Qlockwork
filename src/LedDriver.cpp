@@ -79,6 +79,22 @@ void LedDriver::setPixel(uint8_t num, uint8_t color, uint8_t brightness)
     };
 #endif
 
+#ifdef LED_LAYOUT_VERTICAL_3
+    static const uint8_t ledMap[] = {
+        113,  94,  93,  74,  73,  54,  53,  30,  29,  10, 9,
+        112,  95,  92,  75,  72,  55,  52,  31,  28,  11, 8,
+        111,  96,  91,  76,  71,  56,  51,  32,  27,  12, 7,
+        110,  97,  90,  77,  70,  57,  50,  33,  26,  13, 6,
+        109,  98,  89,  78,  69,  58,  49,  34,  25,  14, 5,
+        108,  99,  88,  79,  68,  59,  48,  35,  24,  15, 4,
+        107, 100,  87,  80,  67,  60,  47,  36,  23,  16, 3,
+        106, 101,  86,  81,  66,  61,  46,  37,  22,  17, 2,
+        105, 102,  85,  82,  65,  62,  45,  38,  21,  18, 1,
+        104, 103,  84,  83,  64,  63,  44,  39,  20,  19, 0,
+         43,  42,  41,  40,  114
+    };
+#endif
+
     uint8_t red   = brightness * 0.0039 * defaultColors[color].red;
     uint8_t green = brightness * 0.0039 * defaultColors[color].green;
     uint8_t blue  = brightness * 0.0039 * defaultColors[color].blue;

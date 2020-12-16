@@ -139,9 +139,10 @@
 #define IR_LETTER_X 8
 #define IR_LETTER_Y 10
 
-#define LED_LAYOUT_HORIZONTAL_1
+//#define LED_LAYOUT_HORIZONTAL_1
 //#define LED_LAYOUT_VERTICAL_1
 //#define LED_LAYOUT_VERTICAL_2
+#define LED_LAYOUT_VERTICAL_3
 
 //#define NEOPIXEL_TYPE NEO_GRB + NEO_KHZ800     // see Adafruit_NeoPixel.h for help
 #define NEOPIXEL_TYPE NEO_GRBW + NEO_KHZ800
