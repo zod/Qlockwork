@@ -36,6 +36,7 @@
 #include <IRrecv.h>
 #include <IRutils.h>
 #include <TimeLib.h>
+#include <Timezone.h>
 
 #include "Colors.h"
 #include "Configuration.h"
@@ -48,7 +49,6 @@
 #include "Renderer.h"
 #include "Settings.h"
 #include "Syslog.h"
-#include "Timezone.h"
 #include "Timezones.h"
 #include "WiFiManager.h"
 
