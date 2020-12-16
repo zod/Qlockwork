@@ -32,7 +32,7 @@ void LedDriver::setPixel(uint8_t x, uint8_t y, uint8_t color, uint8_t brightness
 void LedDriver::setPixel(uint8_t num, uint8_t color, uint8_t brightness)
 {
 #ifdef LED_LAYOUT_HORIZONTAL_1
-    uint8_t ledMap[] = {
+    static const uint8_t ledMap[] = {
           0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,
          21,  20,  19,  18,  17,  16,  15,  14,  13,  12,  11,
          22,  23,  24,  25,  26,  27,  28,  29,  30,  31,  32,
@@ -48,7 +48,7 @@ void LedDriver::setPixel(uint8_t num, uint8_t color, uint8_t brightness)
 #endif
 
 #ifdef LED_LAYOUT_VERTICAL_1
-    uint8_t ledMap[] = {
+    static const uint8_t ledMap[] = {
           1,  21,  22,  41,  42,  61,  62,  81,  82, 101, 103,
           2,  20,  23,  40,  43,  60,  63,  80,  83, 100, 104,
           3,  19,  24,  39,  44,  59,  64,  79,  84,  99, 105,
@@ -64,7 +64,7 @@ void LedDriver::setPixel(uint8_t num, uint8_t color, uint8_t brightness)
 #endif
 
 #ifdef LED_LAYOUT_VERTICAL_2
-    uint8_t ledMap[] = {
+    static const uint8_t ledMap[] = {
           9,  10,  29,  30,  49,  50,  69,  70,  89,  90, 109,
           8,  11,  28,  31,  48,  51,  68,  71,  88,  91, 108,
           7,  12,  27,  32,  47,  52,  67,  72,  87,  92, 107,
