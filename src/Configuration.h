@@ -119,7 +119,7 @@
 //#define RTC_BACKUP
 #define RTC_TEMPERATURE_OFFSET -1.15
 
-//#define LDR
+#define LDR
 //#define LDR_IS_INVERSE
 
 //#define BUZZER
