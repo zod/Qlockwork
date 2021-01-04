@@ -103,7 +103,7 @@
 #define NUMPIXELS 115
 
 //#define ONOFF_BUTTON
-//#define MODE_BUTTON
+#define MODE_BUTTON
 //#define TIME_BUTTON
 
 #define ESP_LED
