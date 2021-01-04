@@ -17,7 +17,7 @@
 #define WIFI_AP_PASS "12345678"
 #define OTA_PASS "1234"
 #define NTP_SERVER "pool.ntp.org"
-#define SHOW_IP
+//#define SHOW_IP
 //#define WIFI_BEEPS
 
 //#define NONE_TECHNICAL_ZERO
