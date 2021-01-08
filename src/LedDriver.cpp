@@ -98,6 +98,7 @@ void LedDriver::setPixel(uint8_t num, uint8_t color, uint8_t brightness)
     uint8_t red   = brightness * 0.0039 * defaultColors[color].red;
     uint8_t green = brightness * 0.0039 * defaultColors[color].green;
     uint8_t blue  = brightness * 0.0039 * defaultColors[color].blue;
+    uint8_t white  = brightness * 0.0039 * defaultColors[color].white;
 
-    strip->setPixelColor(ledMap[num], red, green, blue);
+    strip->setPixelColor(ledMap[num], red, green, blue, white);
 }
