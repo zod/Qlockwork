@@ -1229,7 +1229,16 @@ void moveScreenBufferUp(uint16_t screenBufferOld[], uint16_t screenBufferNew[], 
 
 void writeScreenBuffer(uint16_t screenBuffer[], uint8_t color, uint8_t brightness)
 {
+	writeScreenBufferClear();
+	writeScreenBufferUpdate(screenBuffer, color, brightness);
+	writeScreenBufferCommit();
+}
+
+void writeScreenBufferClear() {
 	ledDriver.clear();
+}
+void writeScreenBufferUpdate(uint16_t screenBuffer[], uint8_t color, uint8_t brightness)
+{
 	for (uint8_t y = 0; y <= 9; y++)
 	{
 		for (uint8_t x = 0; x <= 10; x++)
@@ -1265,7 +1274,9 @@ void writeScreenBuffer(uint16_t screenBuffer[], uint8_t color, uint8_t brightnes
 #endif
 	}
 #endif
+}
 
+void writeScreenBufferCommit() {
 	ledDriver.show();
 }
 
