@@ -239,6 +239,11 @@ void setup()
 	pinMode(PIN_LDR, INPUT);
 #endif
 
+#ifdef PIN_LDR_REF
+	pinMode(PIN_LDR_REF, OUTPUT);
+	digitalWrite(PIN_LDR_REF, HIGH);
+#endif
+
 #ifdef IR_RECEIVER
 	Serial.println("Setting up IR-Receiver.");
 	irrecv.enableIRIn();

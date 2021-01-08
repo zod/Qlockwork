@@ -106,7 +106,7 @@
 #define MODE_BUTTON
 //#define TIME_BUTTON
 
-#define ESP_LED
+//#define ESP_LED
 
 #define MIN_BRIGHTNESS 20
 #define MAX_BRIGHTNESS 255
@@ -168,11 +168,12 @@
 //#define PIN_WIRE_SCL     05 // D1 SCL
 //#define PIN_WIRE_SDA     04 // D2 SDA
 #define PIN_LEDS_DATA    00 // D3 LOW_Flash
-#define PIN_LED          02 // D4 ESP8266_LED
+// #define PIN_LED       02 // D4 ESP8266_LED
 #define PIN_BUZZER       14 // D5
 #define PIN_DHT22        12 // D6
 #define PIN_MODE_BUTTON  15 // D8
 #define PIN_LDR          A0 // ADC
+#define PIN_LDR_REF      02 // D4 ESP8266_LED
 #define PIN_TIME_BUTTON  01 // TXD0
 #define PIN_ONOFF_BUTTON 03 // RXD0
 // GPIO 06 to GPIO 11 are
