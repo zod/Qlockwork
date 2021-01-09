@@ -110,7 +110,7 @@
 //#define ESP_LED
 
 #define MIN_BRIGHTNESS 20
-#define MAX_BRIGHTNESS 255
+#define MAX_BRIGHTNESS 80
 #define TEST_BRIGHTNESS 80
 
 //#define SENSOR_DHT22
