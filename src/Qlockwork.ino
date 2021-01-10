@@ -327,7 +327,7 @@ void setup()
 #ifdef APIKEY
 		syslog.log(LOG_INFO, ";#;dateTime;roomTemperature;roomHumidity;outdoorTemperature;outdoorHumidity;ldrValue;errorCounterNTP;errorCounterDHT;errorCounterOutdoorWeather;freeHeapSize;upTime");
 #else
-		syslog.log(LOG_INFO, ";#;dateTime;roomTemperature;roomHumidity;ldrValue;errorCounterNTP;errorCounterDHT;freeHeapSize;upTime");
+		syslog.log(LOG_INFO, ";#;dateTime;minLdrValue;maxLdrValue;ldrValue;brightness;errorCounterNTP;freeHeapSize;upTime");
 #endif
 #endif
 
@@ -653,8 +653,8 @@ void loop()
 				syslog.log(LOG_INFO, ";D;" + String(tempEspTime) + ";" + String(roomTemperature) + ";" + String(roomHumidity) + ";" + String(outdoorWeather.temperature) + ";" + String(outdoorWeather.humidity) + ";" + String(ldrValue)\
 					+ ";" + String(errorCounterNTP) + ";" + String(errorCounterDHT) + ";" + String(errorCounterOutdoorWeather) + ";" + String(ESP.getFreeHeap()) + ";" + String(upTime));
 #else
-				syslog.log(LOG_INFO, ";D;" + String(tempEspTime) + ";" + String(roomTemperature) + ";" + String(roomHumidity) + ";" + String(ldrValue)\
-					+ ";" + String(errorCounterNTP) + ";" + String(errorCounterDHT) + ";" + String(ESP.getFreeHeap()) + ";" + String(upTime));
+				syslog.log(LOG_INFO, ";D;" + String(tempEspTime) + ";" + String(minLdrValue) + ";" + String(maxLdrValue) + ";" + String(ldrValue)\
+					+ ";" + String(brightness) + ";" + String(errorCounterNTP) + ";" + String(ESP.getFreeHeap()) + ";" + String(upTime));
 #endif
 #ifdef DEBUG
 				Serial.println("Data written to syslog.");
