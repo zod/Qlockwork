@@ -1115,6 +1115,23 @@ void loop()
 			renderer.setAllScreenBuffer(matrix);
 			break;
 #endif
+		case MODE_NAMES:
+			renderer.clearScreenBuffer(matrix);
+			writeScreenBufferClear();
+			matrix[0] |= 0b0010000111100000;
+			matrix[1] |= 0b0000000000100000;
+			matrix[4] |= 0b0000100000100000;
+			writeScreenBufferUpdate(matrix, BLUE, brightness);
+			renderer.clearScreenBuffer(matrix);
+			matrix[2] |= 0b0000111000000000;
+			matrix[3] |= 0b0000111100000000;
+			matrix[8] |= 0b0000000011100000;
+			writeScreenBufferUpdate(matrix, GREEN, brightness);
+			renderer.clearScreenBuffer(matrix);
+			matrix[6] |= 0b0000000000100000;
+			writeScreenBufferUpdate(matrix, RED, brightness);
+			writeScreenBufferCommit();
+			break;
 		case MODE_BLANK:
 			renderer.clearScreenBuffer(matrix);
 			break;
@@ -1179,6 +1196,10 @@ void loop()
 			break;
 		case MODE_WHITE:
 			writeScreenBuffer(matrix, WHITE, TEST_BRIGHTNESS);
+			break;
+#endif
+#ifdef SHOW_MODE_NAMES
+		case MODE_NAMES:
 			break;
 #endif
 		case MODE_FEED:
@@ -1439,6 +1460,9 @@ void setMode(Mode newMode)
 #ifdef APIKEY
 	case MODE_EXT_TEMP:
 	case MODE_EXT_HUMIDITY:
+#endif
+#ifdef SHOW_MODE_NAMES
+	case MODE_NAMES:
 #endif
 		modeTimeout = millis();
 		break;

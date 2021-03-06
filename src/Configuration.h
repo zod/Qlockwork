@@ -34,6 +34,7 @@
 //#define SHOW_MODE_DATE
 #define SHOW_MODE_MOONPHASE
 //#define SHOW_MODE_TEST
+#define SHOW_MODE_NAMES
 
 //#define APIKEY "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 #define LOCATION "Berlin, DE"
