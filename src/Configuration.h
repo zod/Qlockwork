@@ -157,8 +157,8 @@
 //#define DEBUG_MATRIX
 //#define DEBUG_FPS
 
-//#define SYSLOGSERVER_SERVER "192.168.0.1"
-//#define SYSLOGSERVER_PORT 514
+#define SYSLOGSERVER_SERVER "raspberrypi"
+#define SYSLOGSERVER_PORT 5140
 
 #define UPDATE_INFOSERVER "tmw-it.ch"
 #define UPDATE_INFOFILE "/qlockwork/updateinfo.json"
